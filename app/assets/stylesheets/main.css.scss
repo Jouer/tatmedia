@@ -1,0 +1,161 @@
+@import "compass";
+
+$grey-green:  #8ba36d;
+$light-green: #bfcf6d;
+$green: #7d9100;
+$light-grey: #577058;
+$grey: #354242;
+
+h2 {color: $grey;font-size: 20px;margin-bottom: 0;}	
+h3 {color: $light-grey;font-size: 15px; margin-bottom: 0; font-style: italic;}	
+/************************* GRID ************************/
+#grid	{
+	$green-color: white !default;
+	background: $grey-green asset-url("wall.png") top center no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 7000px;
+	z-index: 100;
+}
+/************************* PREMIER ************************/
+#premier{
+	top: 0;
+	width: 100%;
+	height: 100px;
+	position: relative;
+	text-align: center;
+	z-index: 900;
+}
+/************************* IMAGES ************************/
+#pictures {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+	#un{
+		position: absolute;
+		top: 10px;
+		right: 0;
+	}
+	#deux {
+		position: absolute;
+		top: 30px;
+		left: 0;
+	}
+	#trois {
+		position: absolute;
+		top: 6500px;
+		left: 40%;
+	}
+
+/************************* CONTENT ************************/
+.box {	
+	section{
+		display: block;
+		float: right;
+		padding: 20px;
+		background-color: white;
+		opacity: 0.8;
+	    p:first-of-type:first-letter{
+	    	color: $grey;
+			font-family: Georgia, Times, serif;
+			font-size: 2em;
+			margin: 0 5px 0 0;
+			line-height: .7;
+		}
+	@include transition;
+		&:hover{
+			color: black;
+			@include single-box-shadow($blur: 30px);
+			opacity: 1;
+		}
+
+	}
+}
+#content {
+	color: #000;
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	z-index: 300;
+	#four {margin-bottom: 800px;}
+}
+article {margin-top: 10%;
+		@extend .box;
+		text-align: left;	
+	   	overflow: hidden;
+				
+	img {float: right; margin: 0 1em 1em 0;}
+	 .first {
+			border-radius: 3px 25px;
+			img {float: left;}
+			}
+	 .second {
+		border-radius: 5px 30px;
+		}		
+
+}	
+		#home {
+			width: 100%;
+			top: 200px;
+		}
+		#one {
+		
+		
+		}
+		#two {
+		position: absolute;
+		top: 1800px;
+		width: 400px;
+		}
+		#three {
+		position: absolute;
+		top: 4400px;
+		width: 200px;
+		}
+		#four {
+		position: absolute;
+		top: 13000px;
+		width: 800px;
+		margin-bottom: 800px;
+		}
+/************************* NAVIGATION ************************/
+#premier-nav {
+	background: asset-url("lenta.png") top left;
+	position: fixed;
+	opacity: 0.7;
+	height: 35px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding:  0;
+	margin: 0;
+	position: fixed;
+	z-index: 2000;
+	ul{
+		width: 960px;
+		margin: 0 auto;
+		height: 25px;
+		padding-top: 10px;
+		text-align: center;
+		li {
+			float: left;
+			height: 30px;
+			width: 50px;
+			padding-left: 0;
+			list-style-type: none;
+			text-align: center;
+			a {
+				color: #f1ecb9;
+				font-weight: bold;
+				text-decoration: none; 
+			}
+		}
+	}
+}
+
+ 

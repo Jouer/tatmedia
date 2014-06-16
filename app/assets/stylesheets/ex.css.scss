@@ -1,0 +1,23 @@
+@import "compass";
+
+.ex {
+	border-radius: 90px;
+	border: 1px solid lighten(gray, 15%);
+	display: block;
+	width: 180px;
+	height: 180px;
+	margin: 100px auto;
+	background-color: blue;
+	@include transition;
+	    &:hover {
+		background-color: red;
+		$defalt-box-shadow-blur: 30px;
+		@include single-box-shadow($blur: 30px);
+	} 
+}
+ .ex1 {
+	background: asset-url('one.png')center no-repeat;
+	display: block;
+	width: 180px;
+	height: 200px;
+}
